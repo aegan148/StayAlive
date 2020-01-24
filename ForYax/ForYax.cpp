@@ -42,5 +42,5 @@ std::unique_ptr<game> mode::game_mode(const int& setting) {
             std::cout << "Welcome to txt mode!\n";
         }
         else { std::cout << "Total crash!\n"; }
-        return g1;
+        return std::move(g1);
 }

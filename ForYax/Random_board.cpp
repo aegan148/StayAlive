@@ -64,10 +64,16 @@ void txt_Board::main_point()
 
 void txt_Board::ask_create_txt()
 {
-	char local_ansver;
+	int local_ansver;
 	std::cout << "Do you want to create a new .txt file (1-yes,0-no)? No, if you already made it and I'll check it\n";
-	std::cin >> local_ansver;
-	if (local_ansver == '1') {
+	//std::cin >> local_ansver;
+	while (!(std::cin >> local_ansver) || (std::cin.peek() != '\n') || (local_ansver < 0) || (local_ansver > 1))
+	{
+		std::cin.clear();
+		while (std::cin.get() != '\n');
+		std::cout << "Error!Reenter yor choose: 0/1\n";
+	};
+	if (local_ansver == 1) {
 		create_the_txt();
 	}
 	else {

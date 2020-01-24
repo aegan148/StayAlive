@@ -1,0 +1,11 @@
+﻿  Random_board.cpp
+C:\Users\brode\source\repos\ForYax\ForYax\Random_board.cpp(40,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\brode\source\repos\ForYax\ForYax\Random_board.cpp(129,10): warning C4018: >=: несоответствие типов со знаком и без знака
+C:\Users\brode\source\repos\ForYax\ForYax\Random_board.cpp(129,35): warning C4018: >=: несоответствие типов со знаком и без знака
+C:\Users\brode\source\repos\ForYax\ForYax\Random_board.cpp(238,22): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\brode\source\repos\ForYax\ForYax\Random_board.cpp(241,45): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\brode\source\repos\ForYax\ForYax\Random_board.cpp(245,23): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\brode\source\repos\ForYax\ForYax\Random_board.cpp(245,49): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\brode\source\repos\ForYax\ForYax\Random_board.cpp(254,22): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\brode\source\repos\ForYax\ForYax\Random_board.cpp(260,22): warning C4018: <: несоответствие типов со знаком и без знака
+  ForYax.vcxproj -> C:\Users\brode\source\repos\ForYax\Debug\ForYax.exe
