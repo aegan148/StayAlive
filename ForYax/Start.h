@@ -14,12 +14,12 @@ class random_game :public game {
 public:
 	random_game() {};
 	~random_game() { delete mBoard; };
-	virtual void start();
+	void start()override;
 };
 
 class txt_game :public game {
 public:
 	txt_game() {};
 	~txt_game() { delete mBoard; };
-	virtual void start();
+	void start()override;
 };

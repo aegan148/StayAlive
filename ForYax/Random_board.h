@@ -29,7 +29,7 @@ class random_Board: public Board {		//логика для рандомной доски
 public:
 	random_Board() {};
 	~random_Board() {};
-	virtual void main_point();
+	void main_point() override;
 
 	void ask_size_board();
 	void SetMap();
@@ -39,7 +39,7 @@ class txt_Board : public Board {	//логика для тхт доски
 public:
 	txt_Board() {};
 	~txt_Board() {};
-	virtual void main_point();
+	void main_point() override;
 
 	void ask_create_txt();
 	void set_state_cells_txt();

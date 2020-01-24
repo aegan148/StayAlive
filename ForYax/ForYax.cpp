@@ -1,16 +1,19 @@
 ﻿#include"Start.h"
 #include <memory>
 
+class mode {
+public:
+    static std::unique_ptr<game> game_mode(const int& setting);
+};
 void choose_mode(int& setting);
-void check_choose(const int& setting, std::unique_ptr<game>& g1);
 
 int main()
 {
-    std::unique_ptr<game> g1(new random_game());
+    std::unique_ptr<game> g1;
     int setting = NULL;
     choose_mode(setting);
-    check_choose(setting, g1);
 
+    g1= mode::game_mode(setting);
     g1->start();
 }
 
@@ -26,12 +29,18 @@ void choose_mode(int& setting) {
     }
 }
 
-void check_choose(const int& setting, std::unique_ptr<game>& g1) {
-    if (setting == 0) { std::cout << "Welcome to random mode!\n"; }
-    else if (setting == 1) {
-        std::unique_ptr<game> g2(new txt_game());
-        g1 = std::move(g2);
-        std::cout << "Welcome to txt mode!\n";
-    }
-    else { std::cout << "Total crash!\n"; }
+
+std::unique_ptr<game> mode::game_mode(const int& setting) {
+        std::unique_ptr<game> g1(new random_game());
+        if (setting == 0) {
+            std::cout << "Welcome to random mode!\n";
+            ;
+        }
+        else if (setting == 1) {
+            std::unique_ptr<game> g2(new txt_game());
+            g1 = std::move(g2);
+            std::cout << "Welcome to txt mode!\n";
+        }
+        else { std::cout << "Total crash!\n"; }
+        return g1;
 }
