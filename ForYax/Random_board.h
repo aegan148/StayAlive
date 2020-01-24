@@ -8,7 +8,7 @@ using map = std::map<pos, Cell>;// храним координату и ее состояние
 class Board {
 public:
 	Board() {};
-	~Board() {};
+	virtual ~Board() {};
 	virtual void main_point()=0;
 	void board_reset();							//при обнаружении скомпрометированного файла сбрасываем настройки и заполняем файлы заново
 	const map & GetMap() { return mCells; }		//возвращаем готовую доску

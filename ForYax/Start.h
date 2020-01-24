@@ -4,7 +4,7 @@ class game {
 public:
 	game() {};
 	virtual void start()=0;
-	~game() { delete mBoard; };
+	virtual ~game() { delete mBoard; };
 protected:
 	Board* mBoard=nullptr;
 	IO mIO;
